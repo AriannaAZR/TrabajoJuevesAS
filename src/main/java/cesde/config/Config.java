@@ -1,10 +1,9 @@
 package cesde.config;
 
-import cesde.domain.Student;
-import cesde.repository.StudentRepository;
-import cesde.service.StudentServiceImpl;
+import cesde.repository.*;
+import cesde.service.*;
 import cesde.userinterface.MenuApp;
-import cesde.view.StudentView;
+import cesde.view.*;
 
 public class Config {
 
@@ -12,10 +11,22 @@ public class Config {
 
 
         StudentRepository studentRepository = new StudentRepository();
-        StudentServiceImpl studentServiceImpl = new StudentServiceImpl( studentRepository);
-        StudentView studentView = new StudentView(studentServiceImpl);
+        CourseRepository courseRepository = new CourseRepository();
+        TeacherRepository teacherRepository = new TeacherRepository();
+        ClassroomRepository classroomRepository = new ClassroomRepository();
 
-        return new MenuApp(studentView);
+        StudentServiceImpl studentServiceImpl = new StudentServiceImpl(studentRepository);
+        CourseServiceImpl courseServiceImpl = new CourseServiceImpl(courseRepository);
+        TeacherServiceImpl teacherServiceImpl = new TeacherServiceImpl(teacherRepository);
+        ClassroomServiceImpl classroomServiceImpl = new ClassroomServiceImpl(classroomRepository);
+
+        StudentView studentView = new StudentView(studentServiceImpl);
+        CourseView courseView = new CourseView(courseServiceImpl);
+        TeacherView teacherView = new TeacherView(teacherServiceImpl);
+        ClassroomView classroomView = new ClassroomView(classroomServiceImpl);
+
+
+        return new MenuApp(studentView, courseView, teacherView, classroomView);
     }
 
 

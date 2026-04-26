@@ -2,7 +2,7 @@ package cesde.domain;
 
 import java.util.Scanner;
 
-public class Course {
+public class Classroom {
 
     Scanner sc = new Scanner(System.in);
 
@@ -10,25 +10,25 @@ public class Course {
 
     private int id;
     private String name;
-    private String description;
-    private int credits;
+    private String building;
+    private int capacity;
     private boolean status;
 
     // Constructors
 
-    public Course() {
+    public Classroom() {
 
     }
 
-    public Course(int id) {
+    public Classroom(int id) {
         this.id = id;
     }
 
-    public Course(int id, String name, String description, int credits, boolean status) {
+    public Classroom(int id, String name, String building, int capacity, boolean status) {
         this.id = id;
         this.name = name;
-        this.description = description;
-        this.credits = credits;
+        this.building = building;
+        this.capacity = capacity;
         this.status = status;
     }
 
@@ -50,20 +50,20 @@ public class Course {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getBuilding() {
+        return building;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setBuilding(String building) {
+        this.building = building;
     }
 
-    public int getCredits() {
-        return credits;
+    public int getCapacity() {
+        return capacity;
     }
 
-    public void setCredits(int credits) {
-        this.credits = credits;
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
     }
 
     public boolean isStatus() {

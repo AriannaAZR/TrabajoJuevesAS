@@ -1,4 +1,4 @@
-package cesde.repository;
+package cesde.persistense.repository;
 
 import cesde.domain.School;
 

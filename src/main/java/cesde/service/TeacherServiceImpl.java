@@ -1,7 +1,7 @@
 package cesde.service;
 
 import cesde.domain.Teacher;
-import cesde.repository.TeacherRepository;
+import cesde.persistense.repository.TeacherRepository;
 import cesde.util.TypeValidator;
 
 import java.util.List;

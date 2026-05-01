@@ -3,7 +3,7 @@ package cesde.domain;
 import java.util.List;
 import java.util.Scanner;
 
-public class Student {
+public class Student extends User{
 
     Scanner sc = new Scanner(System.in);
 
@@ -11,11 +11,7 @@ public class Student {
 
     // Atributes
 
-    private int id;
-    private String name;
-    private String lastName;
-    private String email;
-    private boolean status;
+    private String studentType;
 
     //Constructores
 
@@ -23,61 +19,16 @@ public class Student {
 
     }
 
-    public Student(String email){
-        this.email = email;
+    public Student(int id, String name, String lastName, String email, String phone, String password, boolean status, String studentType) {
+        super(id, name, lastName, email, phone, password, status);
+        this.studentType = studentType;
     }
 
-    public Student(int id, String name,String lastName, String email, boolean status) {
-        this.id = id;
-        this.name = name;
-        this.lastName = lastName;
-        this.email = email;
-        this.status = status;
+    public String getStudentType() {
+        return studentType;
     }
-
-    // Getters And Setters
-
-    public int getId(){
-        return this.id;
-    }
-
-
-    public void setId(int id){
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-
-
-    public boolean isStatus() {
-        return status;
-    }
-
-    public void setStatus(boolean status) {
-        this.status = status;
+    public void setStudentType(String studentType) {
+        this.studentType = studentType;
     }
 
     //methods

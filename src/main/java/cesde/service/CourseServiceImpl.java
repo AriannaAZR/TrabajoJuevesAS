@@ -1,7 +1,7 @@
 package cesde.service;
 
 import cesde.domain.Course;
-import cesde.repository.CourseRepository;
+import cesde.persistense.repository.CourseRepository;
 import cesde.util.TypeValidator;
 
 import java.util.List;

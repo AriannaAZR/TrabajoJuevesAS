@@ -1,6 +1,6 @@
 package cesde.config;
 
-import cesde.repository.*;
+import cesde.persistense.repository.*;
 import cesde.service.*;
 import cesde.userinterface.MenuApp;
 import cesde.view.*;
